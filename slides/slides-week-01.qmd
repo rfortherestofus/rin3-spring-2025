@@ -371,7 +371,7 @@ Live sessions:
 
 - You can schedule 1-on-1 calls with her if you have specific questions:
 
-  - [Gracielle's scheduling link](https://savvycal.com/graciellehigino/30min)
+  - [Gracielle's scheduling link](https://savvycal.com/rfortherestofus/chat-with-gracielle)
 
 # Project Datasets
 
@@ -385,11 +385,19 @@ Live sessions:
 
 - If you need help to remove personally identifiable information, please let Gracielle know!
 
-- Please check in with Gracielle via email or on Discord about your data to make sure what you're working with will serve you well
+- Please check in with Gracielle via email about your data to make sure what you're working with will serve you well
+
+::: {.notes}
+Paste email on chat if needed: gracielle@rfortherestofus.com
+:::
 
 # How to Organize Your Files in R in 3 Months
 
-TODO
+[The learner directory template](https://github.com/rfortherestofus/r3m-learner_template)
+
+::: {.notes}
+Zip file link: https://github.com/rfortherestofus/r3m-learner_template/archive/refs/heads/main.zip
+:::
 
 # Getting Started Questions {.inverse}
 
