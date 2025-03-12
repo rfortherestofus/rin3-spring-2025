@@ -1,0 +1,94 @@
+---
+title: R in 3 Months Week 7 (Tidy Data Part 2 and Functions)
+format:
+  rfortherestofus-slides-revealjs:
+    menu: false
+    progress: true
+    slide-number: true
+    show-slide-number: print
+    center: true
+    incremental: true
+    auto-animate: true
+execute: 
+  message: false
+  warning: false
+  cache: false
+  # eval: false
+  echo: true
+title-slide-attributes:
+  data-background-image: assets/rru-hex-bg-gradient-dark.svg
+  data-background-size: cover
+editor_options: 
+  chunk_output_type: console
+---
+
+# Agenda
+
+1. Housekeeping
+
+1. Question on Function Arguments
+
+1. Tidy Example Project
+
+1. Coach Tip
+
+1. Next Week
+
+::: {.notes}
+https://rin3fall2024.rfortherestofus.com/slides/slides-week-08.html
+:::
+
+# Housekeeping {.inverse}
+
+
+
+# Question on Function Arguments
+
+. . .
+
+I'm seeing a difference in the syntax used in the main video vs the solution video and am wondering if you can please explain the difference. In the main video, you use `separate_longer_delim(cols = activities,...` but the solution video uses `separate_longer_delim(partyid,...` without the use of `cols =`.
+
+::: {.notes}
+https://rfortherestofus.com/courses/r-in-3-months-fall-2024/lessons/tidy-data-rule-2-every-row-is-an-observation
+
+https://rfortherestofus.com/courses/r-in-3-months-fall-2024/lessons/using-function-arguments
+:::
+
+
+# Tidy Example Project
+
+::: {.notes}
+- make demographics data frame
+- make function to import data
+- show importing multiple years of data
+- make function to work with slightly different data (2021): show doing extra steps after function and within it (show rename() not working, but use set_names() instead)
+- in report, show merging demographics data frame in
+- make function to create data viz for any year
+:::
+
+<!-- # A Few of Our Favorite Functions -->
+
+<!-- - You've created a function in the context of data cleaning, but functions can be for anything -->
+
+<!-- - You'll learn later how to make a custom ggplot theme that is a function -->
+
+<!-- ::: {.notes} -->
+<!-- https://book.rfortherestofus.com/packages.html -->
+<!-- ::: -->
+
+# Coach Tip
+
+::: {.column width="70%"}
+
+[Data Science in a Box interactive tutorials](https://datasciencebox.org/02-interactive-tutorials)
+:::
+
+::: {.column width="20%"}
+![](https://datasciencebox.org/images/dsbox.png){.aside}
+:::
+
+# Next Week
+
+- Course lessons cover data merging and data exporting
+
+- Project assignment is to tidy your data with the various functions you have learned
