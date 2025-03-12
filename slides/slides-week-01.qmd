@@ -306,7 +306,7 @@ Share with the people in your breakout room:
 
 ## Course Materials
 
-[![](assets/course-materials.png)](https://rfortherestofus.com/courses/wellspring)
+[![](assets/course-materials.png)](https://rfortherestofus.com/courses/r-in-3-months-spring-2025)
 
 ::: {.notes}
 - Try not to get more than 2 weeks behind
@@ -393,11 +393,7 @@ Paste email on chat if needed: gracielle@rfortherestofus.com
 
 # How to Organize Your Files in R in 3 Months
 
-[The learner directory template](https://github.com/rfortherestofus/r3m-learner_template)
-
-::: {.notes}
-Zip file link: https://github.com/rfortherestofus/r3m-learner_template/archive/refs/heads/main.zip
-:::
+[The learner directory template](https://github.com/rfortherestofus/r3m-learner_template/archive/refs/heads/main.zip)
 
 # Getting Started Questions {.inverse}
 
