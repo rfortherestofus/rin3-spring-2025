@@ -49,7 +49,7 @@ Put your answer in the chat!
 1. Next week
 
 ::: {.notes}
-https://rin3fall2024.rfortherestofus.com/slides/slides-week-04.html
+https://rin3spring2025.rfortherestofus.com/slides/slides-week-04.html
 :::
 
 # Housekeeping

@@ -44,7 +44,7 @@ library(scales)
 5.  Next Week
 
 ::: notes
-https://rin3fall2024.rfortherestofus.com/slides/slides-week-07.html
+https://rin3spring2025.rfortherestofus.com/slides/slides-week-07.html
 :::
 
 # Housekeeping {.inverse}
