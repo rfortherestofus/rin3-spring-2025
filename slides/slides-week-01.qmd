@@ -38,7 +38,11 @@ library(sf)
 library(emojifont)
 
 world_sf <- countries110 |>
-  st_as_sf()
+  st_as_sf() |>
+  filter(sovereignt != "Antarctica") |>
+  st_transform(
+    "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"
+  )
 ```
 
 # Agenda
@@ -118,7 +122,7 @@ ggplot() +
     data = world_sf,
     fill = "bisque",
     color = "white",
-    size = 0.5
+    size = 2
   ) +
   geom_sf(
     data = geocoded_participants,
