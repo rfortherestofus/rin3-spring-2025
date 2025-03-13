@@ -58,7 +58,7 @@ world_sf <- countries110 |>
 1. Next Week
 
 ::: {.notes}
-http://rin3spring2025.rfortherestofus.com/slides/slides-week-01.html
+https://rin3spring2025.rfortherestofus.com/slides/slides-week-01.html
 :::
 
 # Survey
