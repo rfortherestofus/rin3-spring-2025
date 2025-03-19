@@ -107,6 +107,12 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-02.html
 
 # Common Issues and Your Questions {.inverse}
 
+## How to Import Excel Files 
+
+. . .
+
+![](assets/readxl.png)
+
 ## Packages
 
 . . .
