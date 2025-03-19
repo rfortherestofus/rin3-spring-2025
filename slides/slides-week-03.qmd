@@ -54,7 +54,7 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-03.html
 
 ## Housekeeping
 
-- [Lesson on labelled data](https://rfortherestofus.com/courses/r-in-3-months-fall-2024/lessons/working-with-labelled-data)
+- [Lesson on labelled data](https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/working-with-labelled-data)
 
 # Data Viz Tips {.inverse}
 
