@@ -184,29 +184,7 @@ Source: [R for Data Science, 1st Edition](https://arc.net/l/quote/llsbqlfp)
 One caveat is that when get your data into tidy format, you will need to do less piping afterwards
 :::
 
-## When is data real?
 
-> I would like you to help me confirm that once an Object appears in the Environment Panel, it's automatically saved. In this case our object is `penguins`.
-
-. . .
-
-![](assets/where-does-data-live.png)
-
-::: {.notes}
-You will later change your settings so that you only have objects when you run code to create them
-:::
-
-## When is data real?
-
-![](https://rstats.wtf/img/if-you-liked-it-you-should-have-saved-the-source-for-it.jpg)
-
-::: {.small}
-Source: [rstats.wtf](https://rstats.wtf/source-and-blank-slates)
-:::
-
-::: {.notes}
-https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/an-important-workflow-tip-v2
-:::
 
 ## Always save your R script files {.inverse}
 

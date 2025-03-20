@@ -62,6 +62,30 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-04.html
 
 1. How to change variable names
 
+## When is data real?
+
+> I would like you to help me confirm that once an Object appears in the Environment Panel, it's automatically saved. In this case our object is `penguins`.
+
+. . .
+
+![](assets/where-does-data-live.png)
+
+::: {.notes}
+You will later change your settings so that you only have objects when you run code to create them
+:::
+
+## When is data real?
+
+![](https://rstats.wtf/img/if-you-liked-it-you-should-have-saved-the-source-for-it.jpg)
+
+::: {.small}
+Source: [rstats.wtf](https://rstats.wtf/source-and-blank-slates)
+:::
+
+::: {.notes}
+https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/an-important-workflow-tip-v2
+:::
+
 # Quarto {.inverse}
 
 ::: {.notes}
