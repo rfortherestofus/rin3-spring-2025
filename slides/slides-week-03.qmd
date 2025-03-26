@@ -36,15 +36,14 @@ Please put your answer in the chat!
 
 1. Housekeeping
 
+1. Example projects
+
 1. Data viz tips
 
 1. Data viz exercise
 
-1. Data viz live coding
-
-1. Weekly coach tips
-
 1. Next week
+
 
 ::: {.notes}
 https://rin3spring2025.rfortherestofus.com/slides/slides-week-03.html
@@ -54,25 +53,60 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-03.html
 
 ## Housekeeping
 
-- [Lesson on labelled data](https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/working-with-labelled-data)
+1. Using Git + GitHub with R
+
+# Example Projects {.inverse}
 
 # Data Viz Tips {.inverse}
 
-## Data Viz Tips
+## Color vs fill
 
-1. Is there a "correct" order to put geoms, scales, themes, etc?
+> Why is it that the color= option is treated differently by geom_point and geom_col? The logic seems inconsistent here since "color=" is used as if it is "fill =" by geom_point. What if I want the scatter plot to have black dots with outline color different by island?
 
-1. Dropping points in scatterplots
+## Applying values specific color/fill properties
 
-1. Width of bars in bar charts
+> When using scale_color_manual, do you need to specify the order in which colors are applied to a certain category? I assume it matters. How will I know which colors are being applied to specific data?
 
-1. How to center text in bar charts
+::: {.notes}
+https://rfortherestofus.com/courses/r-in-3-months-fall-2023/lessons/setting-color-and-fill-scales#comments
+:::
 
-1. Ordering bar charts
+## Labels vs breaks
 
-1. Wrapping long text in charts
+```{r}
+penguins_by_species <-
+  penguins |>
+  count(species)
+```
 
-1. How to adjust axis text labels
+```{r}
+ggplot(
+  penguins_by_species,
+  aes(x = species, y = n, fill = species, label = n)
+) +
+  geom_bar(stat = "identity") +
+  scale_fill_viridis_d() +
+  scale_y_continuous(
+    limits = c(0, 200),
+    labels = c(0, 40, 80, 120, 160)
+  ) +
+  geom_label(vjust = 1.5, color = "white") +
+  geom_hline(yintercept = c(120, 150), color = "red")
+```
+
+::: {.notes}
+https://rfortherestofus.com/courses/r-in-3-months-fall-2023/lessons/setting-x-and-y-scales#comments
+:::
+
+## Is there a "correct" order to put geoms, scales, themes, etc?
+
+## Dropping points in scatterplots
+
+## Width of bars in bar charts
+
+## Ordering bar charts
+
+## Wrapping long text in charts
 
 # Data Viz Exercise {.inverse}
 
@@ -83,14 +117,6 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-03.html
 ::: notes
 https://raw.githubusercontent.com/rfortherestofus/rin3-fall-2024/refs/heads/main/misc/median-income-viz.R
 :::
-
-# Data Viz Live Coding
-
-- Let's make a population pyramid!
-
-# Weekly Coach Tip
-
-[The tidyverse style guide](https://style.tidyverse.org/index.html)
 
 # Next Week
 
