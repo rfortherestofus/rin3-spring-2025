@@ -19,11 +19,6 @@ penguins_by_species <-
 
 # Color vs Fill ----------------------------------------------------------
 
-# Why is it that the color= option is treated differently by geom_point and
-# geom_col? The logic seems inconsistent here since "color=" is used as if it is
-# "fill =" by geom_point. What if I want the scatter plot to have black dots
-# with outline color different by island?
-
 ggplot(
   data = penguins,
   mapping = aes(

@@ -10,23 +10,37 @@
 
 library(tidyverse)
 
-median_income_yamhill <- read_csv("https://raw.githubusercontent.com/rfortherestofus/rin3-fall-2024/main/data-raw/oregon-median-income-by-county.csv") |> 
+median_income_yamhill <-
+  read_csv(
+    "https://raw.githubusercontent.com/rfortherestofus/rin3-fall-2024/main/data-raw/oregon-median-income-by-county.csv"
+  ) |>
   filter(geography %in% c("Yamhill", "Oregon"))
 
-ggplot(data = median_income_yamhill,
-       aes(x = amount,
-           y = geography,
-           label = amount_formatted,
-           fill = geography)) +
+ggplot(
+  data = median_income_yamhill,
+  aes(
+    x = amount,
+    y = geography,
+    label = amount_formatted,
+    fill = geography
+  )
+) +
   geom_col(show.legend = FALSE) +
-  geom_text(color = "white",
-            hjust = 1.2) +
-  geom_text(aes(
-    x = 10000,
-    label = geography
-  ),
-  color = "white") +
-  scale_fill_manual(values = c(
-    "gray", "darkgreen"
-  )) +
+  geom_text(
+    color = "white",
+    hjust = 1.2
+  ) +
+  geom_text(
+    aes(
+      x = 10000,
+      label = geography
+    ),
+    color = "white"
+  ) +
+  scale_fill_manual(
+    values = c(
+      "gray",
+      "darkgreen"
+    )
+  ) +
   theme_void()

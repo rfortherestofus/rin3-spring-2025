@@ -53,7 +53,7 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-03.html
 
 ## Housekeeping
 
-1. Using Git + GitHub with R
+1. Co-working session next week will be **Monday** instead of Tuesday (same time)
 
 # Example Projects {.inverse}
 
@@ -73,16 +73,24 @@ https://rfortherestofus.com/courses/r-in-3-months-fall-2023/lessons/setting-colo
 
 ## Labels vs breaks
 
+> Why is this code showing the text 152 above the y axis text 120?
+
+---
+
 ```{r}
+#| echo: false
 penguins_by_species <-
   penguins |>
   count(species)
-```
 
-```{r}
 ggplot(
   penguins_by_species,
-  aes(x = species, y = n, fill = species, label = n)
+  aes(
+    x = species,
+    y = n,
+    fill = species,
+    label = n
+  )
 ) +
   geom_bar(stat = "identity") +
   scale_fill_viridis_d() +
@@ -90,8 +98,34 @@ ggplot(
     limits = c(0, 200),
     labels = c(0, 40, 80, 120, 160)
   ) +
-  geom_label(vjust = 1.5, color = "white") +
-  geom_hline(yintercept = c(120, 150), color = "red")
+  geom_label(vjust = 1.5, color = "white")
+```
+
+---
+
+```{r}
+#| eval: false
+
+penguins_by_species <-
+  penguins |>
+  count(species)
+
+ggplot(
+  penguins_by_species,
+  aes(
+    x = species,
+    y = n,
+    fill = species,
+    label = n
+  )
+) +
+  geom_bar(stat = "identity") +
+  scale_fill_viridis_d() +
+  scale_y_continuous(
+    limits = c(0, 200),
+    labels = c(0, 40, 80, 120, 160)
+  ) +
+  geom_label(vjust = 1.5, color = "white")
 ```
 
 ::: {.notes}
@@ -104,7 +138,11 @@ https://rfortherestofus.com/courses/r-in-3-months-fall-2023/lessons/setting-x-an
 
 ## Width of bars in bar charts
 
-## Ordering bar charts
+## Reordering bar charts
+
+::: {.notes}
+https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/reorder-plots-to-highlight-findings-v2
+:::
 
 ## Wrapping long text in charts
 
@@ -115,7 +153,7 @@ https://rfortherestofus.com/courses/r-in-3-months-fall-2023/lessons/setting-x-an
 ![](assets/median-income-example.png)
 
 ::: notes
-https://raw.githubusercontent.com/rfortherestofus/rin3-fall-2024/refs/heads/main/misc/median-income-viz.R
+https://raw.githubusercontent.com/rfortherestofus/rin3-spring-2025/refs/heads/main/misc/median-income-viz.R
 :::
 
 # Next Week
