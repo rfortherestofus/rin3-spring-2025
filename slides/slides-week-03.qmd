@@ -51,6 +51,8 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-03.html
 
 # Housekeeping {.inverse}
 
+## Problems with Videos? {.inverse}
+
 ## Housekeeping
 
 1. Co-working session next week will be **Monday** instead of Tuesday (same time)
