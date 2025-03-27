@@ -1,7 +1,7 @@
 # Load Packages -----------------------------------------------------------
 
 library(tidyverse)
-library(gapminder)
+library(ggthemes)
 
 # Import Data -------------------------------------------------------------
 
@@ -23,16 +23,62 @@ ggplot(
   data = penguins,
   mapping = aes(
     x = flipper_length_mm,
-    y = body_mass_g
+    y = body_mass_g,
+    color = island
   )
 ) +
-  geom_point()
+  geom_point(shape = 21)
+
+
+ggplot(
+  penguins,
+  aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = island
+  )
+) +
+  geom_point(shape = 21)
+
+penguins |>
+  filter(body_mass_g > 3500) |>
+  ggplot(aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    fill = island,
+  )) +
+  # scale_fill_viridis_d() +
+  scale_fill_viridis_d(option = "inferno") +
+    geom_point(shape = 21) +
+  theme_economist()
+
+biggest_penguin <- 
+penguins |> 
+  slice_max(order_by = body_mass_g, n = 1)
+
+ggplot(
+  penguins,
+  aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = island
+  )
+) +
+  geom_point(shape = 21) +
+  geom_point(
+    data = biggest_penguin,
+    color = "orange",
+    size = 4,
+    alpha = 0.25
+  ) +
+  theme_minimal()
 
 ggplot(
   data = penguins_by_species,
   mapping = aes(
     x = species,
-    y = n
+    y = n,
+    color = species
   )
 ) +
   geom_col()
@@ -48,9 +94,17 @@ ggplot(
     fill = species
   )
 ) +
-  geom_col()
+  geom_col() +
+  scale_fill_manual(
+    values = c(
+      "Chinstrap" = "yellow", 
+      "Adelie" = "blue", 
+      "Gentoo" = "green")
+  )
 
 # Labels vs breaks -------------------------------------------------------
+
+penguins_by_species
 
 ggplot(
   penguins_by_species,
@@ -60,7 +114,9 @@ ggplot(
   scale_fill_viridis_d() +
   scale_y_continuous(
     limits = c(0, 200),
-    labels = c(0, 40, 80, 120, 160)
+    breaks = seq(from = 0, to = 200, by = 5),
+    labels = seq(from = 0, to = 200, by = 5)
+    # labels = c(0, 40, 80, 120, 160)
   ) +
   geom_label(vjust = 1.5, color = "white")
 
@@ -102,11 +158,18 @@ ggplot(
   aes(
     x = island,
     y = mean_bill_length,
-    label = mean_bill_length
+    label = mean_bill_length,
+    color = island
   )
 ) +
-  geom_col() +
+  geom_col(width = 0.95) +
   theme_minimal()
+
+ggplot(
+  data = penguins,
+  aes(x = bill_length_mm)
+) +
+  geom_histogram(binwidth = 0.5)
 
 # Reordering Bar Charts ---------------------------------------------------
 
@@ -143,6 +206,10 @@ ggplot(
 
 
 # Wrapping Long Text ------------------------------------------------------
+
+library(gapminder)
+
+data("gapminder")
 
 ggplot(
   data = gapminder,
