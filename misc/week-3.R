@@ -49,11 +49,11 @@ penguins |>
   )) +
   # scale_fill_viridis_d() +
   scale_fill_viridis_d(option = "inferno") +
-    geom_point(shape = 21) +
+  geom_point(shape = 21) +
   theme_economist()
 
-biggest_penguin <- 
-penguins |> 
+biggest_penguin <-
+  penguins |>
   slice_max(order_by = body_mass_g, n = 1)
 
 ggplot(
@@ -97,9 +97,10 @@ ggplot(
   geom_col() +
   scale_fill_manual(
     values = c(
-      "Chinstrap" = "yellow", 
-      "Adelie" = "blue", 
-      "Gentoo" = "green")
+      "Chinstrap" = "yellow",
+      "Adelie" = "blue",
+      "Gentoo" = "green"
+    )
   )
 
 # Labels vs breaks -------------------------------------------------------
