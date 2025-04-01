@@ -75,7 +75,7 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-02.html
 
 ## Cheatsheets
 
-- [Posit Cheatsheets](https://github.com/rfortherestofus/rin3-fall-2024/blob/main/misc/beginner-https://sheets.pdf)
+- [Posit Cheatsheets](https://github.com/rfortherestofus/r-in-3-months-spring-2025/blob/main/misc/beginner-https://sheets.pdf)
 
 - [R for the Rest of Us Cheatsheets](https://cheatsheets.rfortherestofus.com/cheatsheets-rin3.html)
 
