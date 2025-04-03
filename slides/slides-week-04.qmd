@@ -56,7 +56,9 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-04.html
 
 # Questions on Data Wrangling or Data Viz? {.inverse}
 
-## Questions on Data Wrangling or Data Viz?
+::: {.notes}
+scales::dollar()
+:::
 
 ## When is data real?
 
@@ -245,13 +247,13 @@ Column 2
 - Also [check out the appendix in Kieran Healy's book](https://socviz.co/appendix.html#a-little-more-about-r)
 
 ::: {.notes}
-https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/understanding-documentation-pages
+https://rfortherestofus.com/courses/r-in-3-months-spring-20des25/lessons/understanding-documentation-pages
 :::
 
 ## Any Other Quarto Questions? {.inverse}
 
 # Next Week
 
-- Catch-up week! No live session or co-working sessions are happening, but please reach out to your coach for any help you may need!
+- Catch-up week! No live session or co-working sessions are happening, but please reach out to Gracielle for any help you may need!
 
 - For following week, you will be learning about advanced data wrangling, focusing on the concept of tidy data. Lessons are up now so you can start whenever you would like to!
