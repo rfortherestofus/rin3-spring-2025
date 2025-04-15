@@ -58,6 +58,8 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-04.html
 
 ::: {.notes}
 scales::dollar()
+
+ungroup()
 :::
 
 ## When is data real?
