@@ -232,7 +232,7 @@ Recategorize race + ethnicity
 
 ## Gracielle {.inverse}
 
-# Misc Questions {.inverse}
+# Misc Questions {.inverse .hidden}
 
 ::: {.notes}
 How to format large numbers (scale::number or scale::comma)
