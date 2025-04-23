@@ -38,7 +38,7 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-07.html
 
 # Housekeeping {.inverse}
 
-
+- Join Discord if you haven't and are interested!
 
 # Question on Function Arguments
 

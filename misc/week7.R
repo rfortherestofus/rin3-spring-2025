@@ -1,4 +1,3 @@
-
 # Functions as Recipes ----------------------------------------------------
 
 # https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-container-8678
@@ -26,13 +25,13 @@ show_in_excel_penguins()
 
 show_in_excel <- function(data) {
   csv_file <- "my-data.csv"
-  
+
   write_csv(
     x = data,
     file = csv_file,
     na = ""
   )
-  
+
   file_show(path = csv_file)
 }
 
