@@ -1,5 +1,5 @@
 ---
-title: R in 3 Months Week 7 (Tidy Data Part 2 and Functions)
+title: R in 3 Months Week 7 (Functions)
 format:
   rfortherestofus-slides-revealjs:
     menu: false
@@ -37,6 +37,8 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-07.html
 :::
 
 # Housekeeping {.inverse}
+
+---
 
 - Join Discord if you haven't and are interested!
 

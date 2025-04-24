@@ -1,6 +1,50 @@
+# Function Arguments ------------------------------------------------------
+
+library(tidyverse)
+
+penguins <- read_csv("data-raw/penguins.csv")
+
+ggplot(
+  data = penguins,
+  mapping =
+    aes(
+      x = bill_length_mm,
+      y = bill_depth_mm
+    )
+) +
+  geom_point()
+
+ggplot(
+  penguins,
+  aes(
+    bill_length_mm,
+    bill_depth_mm
+  )
+) +
+  geom_point()
+
 # Functions as Recipes ----------------------------------------------------
 
 # https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/#wprm-recipe-container-8678
+
+calculate_cookie_ingredients <- function(number_of_cookies) {
+  
+  cookie_ingredients <- read_csv("data-raw/cookie-ingredients.csv") |> 
+    rename(amount_type = quantity_type)
+  
+  default_number_of_cookies <- 36
+  cookie_ratio <- number_of_cookies / default_number_of_cookies
+  
+  adjusted_cookie_ingredients <- 
+  cookie_ingredients |> 
+    mutate(amount = amount * cookie_ratio)
+  
+  print(adjusted_cookie_ingredients)
+  
+  adjusted_cookie_ingredients
+}
+
+adjusted_ingredients <- calculate_cookie_ingredients(number_of_cookies = 100)
 
 # Show in Excel ----------------------------------------------------------
 
@@ -10,32 +54,28 @@ library(fs)
 penguins <- read_csv("https://data.rfortherestofus.com/penguins-2007.csv")
 
 show_in_excel_penguins <- function() {
-  csv_file <- "my-data.csv"
-
   write_csv(
     x = penguins,
-    file = csv_file,
+    file = "my-data.csv",
     na = ""
   )
-
-  file_show(path = csv_file)
+  
+  file_show(path = "my-data.csv")
 }
 
 show_in_excel_penguins()
 
 show_in_excel <- function(data) {
-  csv_file <- "my-data.csv"
-
   write_csv(
     x = data,
-    file = csv_file,
+    file = "my-data.csv",
     na = ""
   )
-
-  file_show(path = csv_file)
+  
+  file_show(path = "my-data.csv")
 }
 
-show_in_excel(data = palmerpenguins::penguins)
+show_in_excel(data = mtcars)
 
 # ACS Data ---------------------------------------------------------------
 
@@ -57,6 +97,8 @@ race_ethnicity_data <-
     )
   )
 
+race_ethnicity_data
+
 # Basic function
 
 get_acs_race_ethnicity <- function() {
@@ -77,6 +119,11 @@ get_acs_race_ethnicity <- function() {
 
   race_ethnicity_data
 }
+
+get_acs_race_ethnicity() |> 
+  mutate(variable = case_match(
+    
+  ))
 
 # Change variable value text
 
@@ -120,7 +167,9 @@ get_acs_race_ethnicity <- function(clean_variable_names = FALSE) {
     )
 
   if (clean_variable_names == TRUE) {
-    race_ethnicity_data <- clean_names(race_ethnicity_data)
+    race_ethnicity_data <- 
+      race_ethnicity_data |> 
+      clean_names()
   }
 
   race_ethnicity_data
@@ -133,7 +182,7 @@ get_acs_race_ethnicity(clean_variable_names = TRUE)
 get_acs_race_ethnicity <- function(
   clean_variable_names = FALSE,
   ...
-) {
+    ) {
   race_ethnicity_data <-
     get_acs(
       ...,
@@ -150,7 +199,9 @@ get_acs_race_ethnicity <- function(
     )
 
   if (clean_variable_names == TRUE) {
-    race_ethnicity_data <- clean_names(race_ethnicity_data)
+    race_ethnicity_data <- 
+      race_ethnicity_data |> 
+      clean_names()
   }
 
   race_ethnicity_data
@@ -158,5 +209,6 @@ get_acs_race_ethnicity <- function(
 
 get_acs_race_ethnicity(
   geography = "county",
+  year = 2022,
   clean_variable_names = TRUE
 )
