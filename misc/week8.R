@@ -1,43 +1,84 @@
+library(tidyverse)
+
+# as.numeric() vs parse_number() -----------------------------------------
+
+names_and_ages <-
+  tribble(
+    ~name,
+    ~age,
+    "David",
+    "45",
+    "Rachel",
+    "45",
+    "Leila",
+    "8",
+    "Elias",
+    "8 years old (born in 2016)",
+    "Diego",
+    "No longer alive"
+  )
+
+names_and_ages |>
+  mutate(age = as.numeric(age))
+
+names_and_ages |>
+  mutate(age = parse_number(age))
+
 # case_match() vs case_when() ---------------------------------------------
 
-library(tidyverse)
 library(palmerpenguins)
 
 data(penguins)
 
 penguins |>
   select(species) |>
-  mutate(species_v2 = case_match(
-    species,
-    "Adelie" ~ "Island 1",
-    "Chinstrap" ~ "Island 2",
-    "Gentoo" ~ "Island 3"
-  )) 
+  mutate(
+    species_v2 = case_match(
+      species,
+      "Adelie" ~ "Island 1",
+      "Chinstrap" ~ "Island 2",
+      "Gentoo" ~ "Island 3"
+    )
+  )
+
+penguins |>
+  select(species) |>
+  mutate(
+    species_v2 = case_when(
+      species == "Adelie" ~ "Island 1",
+      species == "Chinstrap" ~ "Island 2",
+      species == "Gentoo" ~ "Island 3"
+    )
+  )
 
 penguins |>
   select(species, bill_length_mm) |>
-  mutate(species_and_length = case_when(
-    species == "Adelie" & bill_length_mm > 35 ~ "Big Adelie Penguins",
-    .default = "Other"
-  ))
-
+  mutate(
+    species_and_length = case_when(
+      species == "Adelie" & bill_length_mm > 35 ~ "Big Adelie Penguins",
+      .default = "Other"
+    )
+  )
 
 # Joins with mismatched variable types ------------------------------------
 
-fruits <- tibble(
-  id = c(1, 2, 3, 4),
-  value = c("apple", "banana", "cherry", "date")
-)
+fruits <-
+  tibble(
+    id = c(1, 2, 3, 4),
+    value = c("apple", "banana", "cherry", "date")
+  )
 
-prices <- tibble(
-  id = c("1", "2", "3", "4"),
-  price = c(0.99, 1.50, 2.00, 2.50)
-) |> 
-  mutate(id = as.numeric(id))
+prices <-
+  tibble(
+    id = c("1", "2", "3", "4"),
+    price = c(0.99, 1.50, 2.00, 2.50)
+  )
 
-fruits |> 
-  left_join(prices,
-            join_by(id))
+fruits |>
+  left_join(
+    prices,
+    join_by(id)
+  )
 
 # Many-to-many joins ------------------------------------------------------
 
@@ -45,9 +86,9 @@ orders <-
   tibble(
     order_date = c("2024-01-01", "2024-01-01", "2024-01-02"),
     product = c("apple", "apple", "banana"),
-    quantity = c(5, 3, 2)
-  ) |> 
-  mutate(location = "Store A")
+    quantity = c(5, 3, 2),
+    location = "Store A"
+  )
 
 inventory <-
   tibble(
@@ -59,6 +100,11 @@ inventory <-
 orders |>
   left_join(
     inventory,
-    join_by(product, location)
-  ) 
+    join_by(product)
+  )
 
+# Iteration --------------------------------------------------------------
+
+# Import multiple years of data
+
+# Make multiple plots

@@ -16,11 +16,13 @@ uc_data_raw <-
 demographics <-
   uc_data_raw |>
   mutate(ethnic = str_to_title(ethnic)) |>
-  mutate(ethnic = case_match(
-    ethnic,
-    "Hispamnic" ~ "Hispanic",
-    .default = ethnic
-  )) |>
+  mutate(
+    ethnic = case_match(
+      ethnic,
+      "Hispamnic" ~ "Hispanic",
+      .default = ethnic
+    )
+  ) |>
   select(pat_id:race, address)
 
 weight <-
@@ -54,7 +56,6 @@ scores <-
 
 # Plots -------------------------------------------------------------------
 
-
 weight |>
   left_join(
     demographics,
@@ -72,7 +73,7 @@ weight |>
   theme_minimal()
 
 scores |>
-  filter(measure != "mes") |> 
+  filter(measure != "mes") |>
   ggplot(
     aes(
       x = value,

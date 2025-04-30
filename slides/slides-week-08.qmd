@@ -26,10 +26,6 @@ editor_options:
 
 1. Housekeeping
 
-1. Question on Function Arguments
-
-1. Tidy Example Project
-
 1. Your Questions on Advanced Data Wrangling
 
 1. Project Assignment
@@ -42,31 +38,27 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-08.html
 
 # Housekeeping {.inverse}
 
-## Houskeeping
+## Housekeeping
 
-- [Please fill out check-in survey](https://forms.gle/KRLyB2AWjGNRCtEU6) if you have not already
+- Week 8 Project assignment
 
-# Tidy Example Project {.inverse}
+- Week 9: Advanced data viz
 
-::: {.notes}
-- make demographics data frame
-- make function to import data
-- show importing multiple years of data
-- in report, show merging demographics data frame in
-- make function to create data viz for any year
-:::
+- Week 10: Catch-up week
 
-<!-- # A Few of Our Favorite Functions -->
+- Week 11: Advanced data viz
 
-<!-- - You've created a function in the context of data cleaning, but functions can be for anything -->
+- Week 12: Advanced Quarto
 
-<!-- - You'll learn later how to make a custom ggplot theme that is a function -->
-
-<!-- ::: {.notes} -->
-<!-- https://book.rfortherestofus.com/packages.html -->
-<!-- ::: -->
+- Week 13: Wrap-up
 
 # Your Questions {.inverse}
+
+## as.numeric() + parse_number()
+
+> Does using as.numeric() or parse_number() in R automatically change non-numeric characters into NA?
+
+## Why save as RDS vs CSV? {.inverse}
 
 ## `case_match()` vs `case_when()`
 
@@ -76,14 +68,14 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-08.html
 
 ## Joins
 
+- Difference between joining and binding columns
+
 - Mismatched variable types
 
 - Many-to-many joins
 
-# Project Assignment {.inverse}
+## Iteration {.inverse}
 
 # Next Week
 
-- Advanced data viz, part 1
-
-- Project assignment for week 8 is to tidy your data with the various functions you have learned
+- Advanced data viz, part 1: declutter and highlight your plots
