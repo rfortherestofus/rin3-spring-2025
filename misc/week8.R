@@ -18,11 +18,13 @@ names_and_ages <-
     "No longer alive"
   )
 
-names_and_ages |>
-  mutate(age = as.numeric(age))
+names_and_ages
 
 names_and_ages |>
-  mutate(age = parse_number(age))
+  mutate(age_v2 = as.numeric(age))
+
+names_and_ages |>
+  mutate(age_v2 = parse_number(age))
 
 # case_match() vs case_when() ---------------------------------------------
 
