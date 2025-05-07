@@ -52,7 +52,7 @@ Remaining weeks:
 
 # Housekeeping
 
-You can get feedback from your coach through the end of December
+You can get feedback from your coach through the end of June
 
 . . .
 
@@ -78,9 +78,10 @@ This week you learned about:
 
 [![](assets/cbem-example.jpeg)](https://judishouse.org/research-tools/cbem/cbem-key-topics/cbem-race-ethnicity/cbem-race-ethnicity-reports/)
 
+
 # Next Week
 
-- Advanced data viz, part 2
+- Catch-up week
 
-- For your project assignment, you'll work on your Quarto document and use your RDS file with your cleaned data to create new or improve your previous plots.
+- Week 11 is more advanced data viz, including making your own custom theme
 
