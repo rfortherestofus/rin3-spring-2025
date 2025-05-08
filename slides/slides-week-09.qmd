@@ -78,6 +78,17 @@ This week you learned about:
 
 [![](assets/cbem-example.jpeg)](https://judishouse.org/research-tools/cbem/cbem-key-topics/cbem-race-ethnicity/cbem-race-ethnicity-reports/)
 
+::: {.notes}
+- chicklet
+- colors
+- order of bars
+- limits (hispanic on end at 5.5)
+- text labels
+- state rate line and text
+- patchwork to stitch together plots
+- make function
+:::
+
 
 # Next Week
 
