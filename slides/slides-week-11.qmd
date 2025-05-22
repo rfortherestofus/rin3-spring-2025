@@ -47,8 +47,6 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-11.html
 
 # Housekeeping
 
-1. Next week is catch-up week
-
 1. Two more weeks: Advanced Quarto and final projects
 
 1. Final project is to record a video demonstrating something you've learned ([lesson](https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/r-in-3-months-final-project))
