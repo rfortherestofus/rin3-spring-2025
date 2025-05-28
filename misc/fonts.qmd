@@ -1,0 +1,106 @@
+---
+title: "Fonts"
+format:
+  html: 
+    mainfont: Georgia
+execute: 
+  echo: false
+  warning: false
+  message: false
+  fig-height: 6
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(here)
+
+penguins <- read_csv(here("data-raw/penguins.csv"))
+```
+
+
+## Set fonts in theme
+
+```{r}
+penguins_bill_length_by_island <-
+  penguins |>
+  group_by(island) |>
+  summarize(mean_bill_length = mean(bill_length_mm, na.rm = TRUE))
+
+ggplot(
+  data = penguins_bill_length_by_island,
+  aes(
+    x = island,
+    y = mean_bill_length,
+    label = island
+  )
+) +
+  geom_col() +
+  geom_text(vjust = -1) +
+  theme_minimal(base_family = "Georgia")
+```
+
+
+## Set fonts in geoms
+
+```{r}
+ggplot(
+  data = penguins_bill_length_by_island,
+  aes(
+    x = island,
+    y = mean_bill_length,
+    label = island
+  )
+) +
+  geom_col() +
+  geom_text(
+    vjust = -1,
+    family = "Georgia"
+  ) +
+  theme_minimal(base_family = "Georgia")
+```
+
+## update_geom_defaults()
+
+```{r}
+update_geom_defaults(
+  geom = "text",
+  aes(
+    family = "Georgia"
+  )
+)
+```
+
+```{r}
+ggplot(
+  data = penguins_bill_length_by_island,
+  aes(
+    x = island,
+    y = mean_bill_length,
+    label = island
+  )
+) +
+  geom_col() +
+  geom_text(vjust = -1) +
+  theme_minimal(base_family = "Georgia")
+```
+
+```{r}
+penguins |>
+  count(year) |>
+  mutate(year = as.character(year)) |>
+  ggplot(
+    aes(
+      x = n,
+      y = year,
+      label = n
+    )
+  ) +
+  geom_col() +
+  geom_text(
+    hjust = 2,
+    color = "white"
+  ) +
+  theme_minimal(base_family = "Georgia")
+```

@@ -64,7 +64,7 @@ theme_dk_v2 <- function(plot_type) {
   basic_theme
 }
 
-penguin_bar_chart <-
+# penguin_bar_chart <-
   penguins |>
   group_by(island) |>
   summarize(mean_bill_length = mean(bill_length_mm, na.rm = TRUE)) |>
@@ -77,6 +77,8 @@ penguin_bar_chart <-
     )
   ) +
   geom_col() +
+    geom_text(size.unit = "pt",
+              size = 12) +
   labs(title = "Biscoe penguins have the longest bills on average")
 
 penguin_bar_chart

@@ -33,9 +33,9 @@ library(janitor)
 
 1. Housekeeping
 
-1. Dates and Times
+1. Misc Questions
 
-1. Advanced Quarto
+1. Parameterized Reporting
 
 1. Next Week
 
@@ -49,53 +49,13 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-12.html
 
 1. You'll have access to course materials forever!
 
-# Dates and Times {.inverse}
+# Misc Questions {.inverse}
 
-::: {.notes}
-```
-library(tidyverse)
-library(janitor)
+1. Functions that take variables as arguments
 
-# https://or.water.usgs.gov/non-usgs/bes/
-# https://or.water.usgs.gov/non-usgs/bes/hayden_island.rain
+1. Dealing with fonts in various places
 
-portland_precipitation <-
-  read_csv("data-raw/portland-precipitation.csv") |>
-  clean_names() |>
-  mutate(date = dmy(date)) |>
-  pivot_longer(
-    starts_with("x"),
-    names_to = "hour",
-    values_to = "precipitation"
-  ) |>
-  mutate(hour = parse_number(hour)) |>
-  mutate(precipitation = parse_number(precipitation)) |> 
-  mutate(date_time = make_datetime(
-    year = year(date),
-    month = month(date),
-    day = day(date),
-    hour = hour
-  )) |> 
-  mutate(precipitation = precipitation * 0.01)
-
-portland_precipitation |>
-  ggplot(
-    aes(
-      x = date_time,
-      y = precipitation
-    )
-  ) +
-  geom_col()
-```
-:::
-
-## Learn More About Dates and Times
-
-[Check out Chapter 17 of R for Data Science](https://r4ds.hadley.nz/datetimes)
-
-# Advanced Quarto {.inverse}
-
-## Parameterized Reporting {.inverse}
+# Parameterized Reporting {.inverse}
 
 ::: {.notes}
 Make multiple reports at once
@@ -221,11 +181,11 @@ pwalk(reports, quarto_render)
   
 # Next Week
 
-1. Surveys on your progress and on feedback for R in 3 Months
+1. Surveys on your [progress](https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/r-in-3-months-progress-survey) and on [feedback](https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/r-in-3-months-feedback-survey) for R in 3 Months
   
 1. Please complete final projects **even if you haven't completed every single lesson**
 
-1. Add info about your final project on [this Google Slides presentation](https://docs.google.com/presentation/d/1K2wRaFVK_Fxut-WkaaqIesAEXk40W7OPqchgYmf-L1I/edit?usp=sharing)
+1. Add info about your final project on [this Google Slides presentation](https://docs.google.com/presentation/d/1crH3G9yiksU_INYET-UGhIofWMwQQtkJJAjvEwLzyxE/edit?usp=sharing)
 
 1. Next week we'll talk about your progress (including showing some final projects) and discuss where you go after R in 3 Months to continue learning R
 
