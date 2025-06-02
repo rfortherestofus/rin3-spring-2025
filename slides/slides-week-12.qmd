@@ -45,7 +45,7 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-12.html
   
 # Housekeeping
   
-1. Next week is the last live session, but you can get feedback through end of December
+1. Next week is the last live session, but you can get feedback through end of June
 
 1. You'll have access to course materials forever!
 
@@ -54,6 +54,8 @@ https://rin3spring2025.rfortherestofus.com/slides/slides-week-12.html
 1. Functions that take variables as arguments
 
 1. Dealing with fonts in various places
+
+1. Setting default color/fill palettes
 
 # Parameterized Reporting {.inverse}
 

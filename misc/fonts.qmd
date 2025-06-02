@@ -1,8 +1,8 @@
 ---
 title: "Fonts"
 format:
-  html: 
-    mainfont: Georgia
+  html:
+    mainfont: "Georgia"
 execute: 
   echo: false
   warning: false
@@ -63,11 +63,14 @@ ggplot(
 
 ## update_geom_defaults()
 
+Proident aliquip sint aliqua enim culpa elit irure non amet cillum ipsum est cillum magna. Qui reprehenderit minim dolor reprehenderit officia sint consectetur irure. Occaecat ad sunt nisi deserunt ut nulla proident laborum commodo laborum sint excepteur veniam nisi ullamco. In officia eu cupidatat officia. Reprehenderit eiusmod consectetur nulla occaecat consequat mollit labore mollit. Aliqua labore elit ipsum laboris consequat.
+
 ```{r}
 update_geom_defaults(
   geom = "text",
   aes(
-    family = "Georgia"
+    family = "Georgia",
+    color = "red"
   )
 )
 ```
