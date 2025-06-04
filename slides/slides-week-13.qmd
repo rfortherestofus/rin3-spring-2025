@@ -136,7 +136,7 @@ pre_post_plot(area = "scared")
 ## What You've Done in the Last Three Months {.inverse}
 
 ::: {.notes}
-https://bit.ly/r3m-f24-graduation
+https://docs.google.com/presentation/d/1crH3G9yiksU_INYET-UGhIofWMwQQtkJJAjvEwLzyxE/edit?usp=sharing
 :::
 
 # Where to Go From Here {.inverse}
@@ -146,23 +146,26 @@ https://bit.ly/r3m-f24-graduation
 The power of talking through your code problems 🦆 💬
 
 -   It doesn't have to be a duck
-
+  
 -   Walk through as if the "duck" has no context
 
-## Break it down!
-
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmY4MmFoemhtdmJsNGg4dmtwNmR4dXloemJmdnNmYmVrYWU4eDU0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SCcfZ11oxj4D4HSKlr/giphy.gif){fig-align="center"}
 
 ## Planning with Pseudo Code
 
--   Use plain language **before** you code == comments!
-
--   Avoids "blank page syndrome"
+-   Use plain language **before** you code (sometimes this means starting by the end)
 
 -   Get to know your subject qualitatively
 
 -   Refine your analysis questions
 
+
+## Break it down!
+
+-   Split your code into multiple R scripts by themes and outputs
+
+-   Save functions in separate R scripts
+
+-   Bring to your Quarto document only what you need
 
 
 ## Where to Ask Questions {.inverse}
