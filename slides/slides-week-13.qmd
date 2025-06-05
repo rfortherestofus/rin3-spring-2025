@@ -108,7 +108,7 @@ pre_post_plot <- function(area) {
 }
 ```
 
-::: notes
+::: {.notes}
 https://rfortherestofus.com/courses/r-in-3-months-spring-2025/lessons/r-in-3-months-progress-survey
 :::
 
@@ -178,9 +178,9 @@ There are two popular question and answer communities for (R) code questions:
 
 ### [Posit Community](https://community.rstudio.com/)
 
--   This community is run by Posit and is specifically for R users.
+-   This community is run by Posit and is specifically for R users
 
--   The admins do work to make the site a welcoming place for all users.
+-   The admins do work to make the site a welcoming place for all users
 
 ---
 
@@ -296,11 +296,11 @@ How can I reorder bars on the y axis?
 
 ## Other Things
 
-1.  Topics courses (use coupon code RIN3TOPICSCOURSES to get 25% off)
+1. Topics courses (use coupon code RIN3TOPICSCOURSES to get 25% off)
 
 1. Everyone has access to Using Git and GitHub with R
 
-1.  Additional ways that R for the Rest of Us can help you and your organization
+1. Additional ways that R for the Rest of Us can help you and your organization
 
 ::: {.notes}
 https://rfortherestofus.com/training
