@@ -74,7 +74,8 @@ post_survey <- read_sheet("https://docs.google.com/spreadsheets/d/1S5g1UYyBKiUfI
   clean_names() |>
   filter(timestamp > as_date(rin3_start_date))
 
-post_survey_tidy <- post_survey |>
+post_survey_tidy <-
+  post_survey |>
   select(contains("rate"), contains("terrified")) |>
   set_names(c("data_analysis", "visualization", "scared")) |>
   pivot_longer(cols = everything()) |>
